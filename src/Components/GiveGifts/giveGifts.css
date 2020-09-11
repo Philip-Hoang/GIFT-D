@@ -1,0 +1,138 @@
+@font-face {
+  font-family: "Henriette Bold";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../Commons/Henriette\ Bold.otf"); /* IE9 Compat Modes */
+  src: local("Open Sans"), local("OpenSans"),
+    url("../Commons/Henriette\ Bold.otf") format("embedded-opentype"),
+    /* IE6-IE8 */ url("../Commons/Henriette\ Bold.otf") format("woff2"),
+    /* Super Modern Browsers */ url("../Commons/Henriette\ Bold.otf")
+      format("woff"),
+    /* Modern Browsers */ url("../Commons/Henriette\ Bold.otf")
+      format("truetype"),
+    /* Safari, Android, iOS */ url("../Commons/Henriette\ Bold.otf")
+      format("svg"); /* Legacy iOS */
+}
+body {
+  font-family: "Henriette Bold";
+}
+
+.gift-header1 {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.gift-header3 {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: "Henriette Bold", sans-serif;
+}
+
+.gift-paragraph {
+  font-size: 24px;
+  color: #545871;
+  font-family: Sans-Serif, "Henriette Bold";
+}
+
+.gift-button {
+  background-color: transparent;
+  color: #545871;
+  border: none;
+  cursor: pointer;
+  /* text-decoration: underline; */
+  /* display: inline; */
+  font-size: 24px;
+  font-family: Sans-Serif, "Henriette Bold";
+
+  padding-top: 18px;
+  padding-right: 32px;
+  padding-bottom: 18px;
+  padding-left: 32px;
+
+  margin-top: 17px;
+  /* margin-bottom: 100px; */
+  margin-right: 16px;
+  /* margin-left: 80px; */
+}
+
+.gift-button:hover,
+.gift-button:focus {
+  text-decoration: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.gift-button-inverse {
+  background-color: #545871;
+  color: white;
+  font-weight: lighter;
+  border: none;
+  cursor: pointer;
+  /* text-decoration: underline; */
+  /* display: inline; */
+  font-size: 24px;
+  font-family: Sans-Serif, "Henriette Bold";
+
+  padding-top: 18px;
+  padding-right: 32px;
+  padding-bottom: 18px;
+  padding-left: 32px;
+
+  margin-top: 54px;
+  margin-bottom: 100px;
+  margin-right: 16px;
+  /* margin-left: 80px; */
+}
+
+.gift-button-inverse:hover,
+.gift-button-inverse:focus {
+  text-decoration: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.product-card {
+  background-color: #545871;
+  color: white;
+  font-weight: lighter;
+  border: none;
+  border-radius: 9px;
+  cursor: pointer;
+  padding-right: 32px;
+  padding-left: 32px;
+  margin: 10px;
+  width: calc(100vw / 7);
+  /* text-decoration: underline; */
+  /* display: inline; */
+  /* font-size: 24px;
+  font-family: Sans-Serif, "Henriette Bold";
+
+  padding-top: 18px;
+  padding-right: 32px;
+  padding-bottom: 18px;
+  padding-left: 32px;
+
+  margin-top: 17px;
+  margin-bottom: 100px; */
+  /* margin-right: 16px; */
+  /* margin-left: 80px; */
+}
+
+.product-card:hover,
+.product-card:focus {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.product-image {
+  width: 100%;
+  height: 15vw;
+  object-fit: cover;
+  margin: 10px;
+}
+
+.text-overflow {
+  width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
