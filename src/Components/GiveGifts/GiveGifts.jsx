@@ -482,9 +482,7 @@ class GiveGifts extends Component {
               className="col-4"
               // style={{ zIndex: "5", position: "absolute" }}
             >
-              {this.state.questionComponent
-                ? this.state.questionComponent
-                : null}
+              {false ? this.state.questionComponent : null}
             </div>
             <div className="col-8">
               {/* <div className="offset-4"> */}
