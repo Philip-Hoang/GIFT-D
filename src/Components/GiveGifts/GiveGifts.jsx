@@ -448,7 +448,10 @@ class GiveGifts extends Component {
   };
 
   mappedGifts = (item) => {
-    let image = item && item.Images[0] ? item.Images[0].url_fullxfull : false;
+    let image =
+      item && item.Images && item.Images[0]
+        ? item.Images[0].url_fullxfull
+        : false;
     let title = item.title;
     let link = item.url;
     let price = item.price;
@@ -475,15 +478,20 @@ class GiveGifts extends Component {
         {/* <ProductCardLg /> */}
         <div className="col">
           <div className="row">
-            <div className="col-4">
+            <div
+              className="col-4"
+              // style={{ zIndex: "5", position: "absolute" }}
+            >
               {this.state.questionComponent
                 ? this.state.questionComponent
                 : null}
             </div>
             <div className="col-8">
+              {/* <div className="offset-4"> */}
               <img
                 className="float-right"
                 src={this.state.statusImage}
+                style={{ position: "absolute" }}
                 alt="giftstatus"
               />
             </div>

@@ -21,3 +21,8 @@ class App extends React.Component {
 }
 
 export default App;
+
+//
+//to add new code run the following line -- npm run deploy
+// /https://medium.com/better-programming/how-to-host-your-react-app-on-github-pages-for-free-919ad201a4cb
+// https://philip-hoang.github.io/GIFT-D/

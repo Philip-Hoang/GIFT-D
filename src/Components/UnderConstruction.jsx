@@ -1,9 +1,9 @@
 import React from "react";
-
+import UnderConstruction1 from "./Images/UnderConstruction1.png";
 export default function UnderConstruction() {
   return (
     <div>
-      <h1>Under Construction</h1>
+      <img src={UnderConstruction1} alt="" />
     </div>
   );
 }

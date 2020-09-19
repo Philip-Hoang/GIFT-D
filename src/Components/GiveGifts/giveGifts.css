@@ -136,3 +136,29 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+.back-button {
+  background-color: white;
+  color: #545871;
+  border: none;
+  cursor: pointer;
+  bottom: -498px;
+  left: 90px;
+  position: absolute;
+  font-size: 36px;
+  font-family: Sans-Serif, "Henriette Bold";
+}
+
+.back-button:hover,
+.back-button:focus {
+  text-decoration: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.back-image {
+  position: absolute;
+  bottom: -500px;
+  width: 8%;
+  height: auto;
+}
