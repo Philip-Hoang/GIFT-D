@@ -18,26 +18,63 @@ body {
 }
 
 .gift-header1 {
-  font-size: 48px;
-  font-weight: bold;
+  top: 27.5vh;
+  left: 8.3vw;
+  width: 36vw;
+  /* height: 166px; */
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold)
+    var(--unnamed-font-size-48) / var(--unnamed-line-spacing-56)
+    var(--unnamed-font-family-henriette);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-000000);
+  text-align: left;
+  font: normal normal bold 48px/56px Henriette;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
 }
 
 .gift-header3 {
-  font-size: 24px;
-  font-weight: bold;
-  font-family: "Henriette Bold", sans-serif;
+  margin-top: 3.8vh;
+  left: 8.3vw;
+  width: 410px;
+  /* height: 62px; */
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold)
+    var(--unnamed-font-size-24) / var(--unnamed-line-spacing-32)
+    var(--unnamed-font-family-henriette);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-000000);
+  text-align: left;
+  font: normal normal bold 24px/32px Henriette;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
 }
 
 .gift-paragraph {
-  font-size: 24px;
-  color: #545871;
-  font-family: Sans-Serif, "Henriette Bold";
+  margin-top: 19vh;
+  left: 8.3vw;
+  width: 28vw;
+  /* height: 29px; */
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-300)
+    var(--unnamed-font-size-24) / var(--unnamed-line-spacing-32)
+    var(--unnamed-font-family-basic-sans);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-000000);
+  text-align: left;
+  font: normal normal 300 24px/32px Basic Sans;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
 }
 
 .gift-button {
-  background-color: transparent;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 2px solid #545871;
+  border-radius: 8px;
+  opacity: 1;
   color: #545871;
-  border: none;
+
   cursor: pointer;
   /* text-decoration: underline; */
   /* display: inline; */
@@ -57,9 +94,11 @@ body {
 
 .gift-button:hover,
 .gift-button:focus {
-  text-decoration: none;
+  /* text-decoration: none;
   outline: none;
-  box-shadow: none;
+  box-shadow: none; */
+  color: whitesmoke;
+  background-color: #545871;
 }
 
 .gift-button-inverse {
@@ -137,7 +176,7 @@ body {
   text-overflow: ellipsis;
 }
 
-.back-button {
+/* .back-button {
   background-color: white;
   color: #545871;
   border: none;
@@ -161,4 +200,4 @@ body {
   bottom: -500px;
   width: 8%;
   height: auto;
-}
+} */

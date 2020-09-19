@@ -34,7 +34,11 @@ class TopNavBar extends Component {
     return (
       <React.Fragment>
         <nav className="navbar navbar-expand-lg navbar-light bg-white m-5">
-          <span type="none" className="link-button" onClick={this.goToLogo}>
+          <span
+            type="none"
+            className="link-button logo"
+            onClick={this.goToLogo}
+          >
             GIFT'D
           </span>
 
@@ -43,7 +47,7 @@ class TopNavBar extends Component {
             <ul className="navbar-nav">
               <span
                 type="none"
-                className="link-button mr-5"
+                className="link-button about-us"
                 onClick={this.goToAboutUs}
               >
                 About us
@@ -51,7 +55,7 @@ class TopNavBar extends Component {
 
               <span
                 type="none"
-                className="link-button mr-5"
+                className="link-button reviews"
                 onClick={this.goToReviews}
               >
                 Reviews
@@ -59,7 +63,7 @@ class TopNavBar extends Component {
 
               <span
                 type="none"
-                className="link-button mr-5"
+                className="link-button sign-up"
                 onClick={this.goToSignUp}
               >
                 Sign Up

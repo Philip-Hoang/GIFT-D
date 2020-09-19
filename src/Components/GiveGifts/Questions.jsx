@@ -59,15 +59,17 @@ function mapChoices(props) {
 function Questions(props) {
   let choices = mapChoices(props);
   return (
-    <div
-      className=""
-      style={{ height: "725px" }}
-      key={Math.random() * props.keyIndex}
-    >
+    <div className="" key={Math.random() * props.keyIndex}>
       <div className="col">
-        <h1 className="gift-header1 ">{props.header1}</h1>
-        <h3 className="gift-header3">{props.header3}</h3>
-        <p className="gift-paragraph">{props.question}</p>
+        {props.header1 ? (
+          <h1 className="gift-header1 m-0">{props.header1}</h1>
+        ) : null}
+        {props.header3 ? (
+          <h3 className="gift-header3">{props.header3}</h3>
+        ) : null}
+        {props.question ? (
+          <p className="gift-paragraph">{props.question}</p>
+        ) : null}
         <div className="form-row">{choices}</div>
         {props.keyIndex !== 1 ? (
           <div className="">
