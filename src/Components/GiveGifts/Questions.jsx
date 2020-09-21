@@ -8,8 +8,8 @@ function mapChoices(props) {
     return choice === "Min" || choice === "Max" ? (
       <React.Fragment key={Math.random() * props.keyIndex}>
         <form key={Math.random() * props.keyIndex}>
-          <div className="form-group col">
-            <label className={true ? `gift-button` : null}>{choice}</label>
+          <div className="form-group price-box">
+            <label className={true ? `price-text` : null}>{choice}.</label>
             <input
               className="form-control"
               onChange={props.onHandleChange}
