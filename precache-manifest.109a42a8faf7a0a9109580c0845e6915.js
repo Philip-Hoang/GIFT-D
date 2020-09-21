@@ -1,18 +1,18 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ad04de64e7450527409c770dcbee81a0",
+    "revision": "b34b93cd078a1c4dcc0599c4f17a7efe",
     "url": "/GIFT-D/index.html"
   },
   {
-    "revision": "dbb87f1736beaa28ed3b",
-    "url": "/GIFT-D/static/css/3.d9ad5f5c.chunk.css"
+    "revision": "62597da7bc16a5c4c6c3",
+    "url": "/GIFT-D/static/css/2.40917cda.chunk.css"
   },
   {
-    "revision": "e4f5cffd866a420c2628",
-    "url": "/GIFT-D/static/css/5.40917cda.chunk.css"
+    "revision": "cc92ae99bc7ec8520636",
+    "url": "/GIFT-D/static/css/5.d9ad5f5c.chunk.css"
   },
   {
-    "revision": "3ff12f1404d2d6f6e4d9",
+    "revision": "b6abae597610d08c02b6",
     "url": "/GIFT-D/static/css/main.1aaa1041.chunk.css"
   },
   {
@@ -20,28 +20,28 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/GIFT-D/static/js/0.4159fdf3.chunk.js"
   },
   {
-    "revision": "dbb87f1736beaa28ed3b",
-    "url": "/GIFT-D/static/js/3.1f36d394.chunk.js"
+    "revision": "e6ae0cd03d5841643891",
+    "url": "/GIFT-D/static/js/1.18af046d.chunk.js"
+  },
+  {
+    "revision": "62597da7bc16a5c4c6c3",
+    "url": "/GIFT-D/static/js/2.6af1ca36.chunk.js"
+  },
+  {
+    "revision": "cc92ae99bc7ec8520636",
+    "url": "/GIFT-D/static/js/5.bed0781a.chunk.js"
   },
   {
     "revision": "3453b8997016469371284a28c0e873e2",
-    "url": "/GIFT-D/static/js/3.1f36d394.chunk.js.LICENSE.txt"
+    "url": "/GIFT-D/static/js/5.bed0781a.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "317d1b6dc41ec5161e8f",
-    "url": "/GIFT-D/static/js/4.cc65986e.chunk.js"
+    "revision": "b6abae597610d08c02b6",
+    "url": "/GIFT-D/static/js/main.5a7e989f.chunk.js"
   },
   {
-    "revision": "e4f5cffd866a420c2628",
-    "url": "/GIFT-D/static/js/5.003760fc.chunk.js"
-  },
-  {
-    "revision": "3ff12f1404d2d6f6e4d9",
-    "url": "/GIFT-D/static/js/main.01fcb95d.chunk.js"
-  },
-  {
-    "revision": "739c50959a2c82ceaab8",
-    "url": "/GIFT-D/static/js/runtime-main.4d10797c.js"
+    "revision": "b2c3c57e6a316ab46af2",
+    "url": "/GIFT-D/static/js/runtime-main.4996c83c.js"
   },
   {
     "revision": "b79391ba48df345daf3bbad3ec366346",
