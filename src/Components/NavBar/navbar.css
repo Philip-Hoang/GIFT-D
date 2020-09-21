@@ -5,9 +5,7 @@
   font-weight: lighter;
   cursor: pointer;
   /* text-decoration: underline; */
-  display: inline;
-  margin: 0;
-  padding: 0;
+  /* display: inline; */
 }
 
 .link-button:hover,
@@ -17,22 +15,22 @@
 
 .logo {
   top: 7.4vh;
-  left: 8.3vw;
+  margin-left: 80px;
   width: 6.8vw;
   height: 4.8vh;
   font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold)
-    32px/28px var(--unnamed-font-family-henriette);
+    32px var(--unnamed-font-family-henriette);
   color: var(--unnamed-color-545871);
   text-align: left;
-  font: normal normal bold 32px/28px Henriette;
+  font: normal normal bold 32px Henriette;
   letter-spacing: 1.6px;
   color: #545871;
   opacity: 1;
 }
 
 .about-us {
-  top: 62px;
-  left: 1439px;
+  top: 7.4vh;
+  left: 8.3vw;
   width: 96px;
   height: 29px;
   font: var(--unnamed-font-style-normal) normal
@@ -41,15 +39,15 @@
   letter-spacing: var(--unnamed-character-spacing-0);
   color: var(--unnamed-color-545871);
   text-align: left;
-  font: normal normal normal 24px/30px Basic Sans;
+  font: normal normal normal 24px Basic Sans;
   letter-spacing: 0px;
   color: #545871;
   opacity: 1;
 }
 
 .reviews {
-  top: 62px;
-  left: 1579px;
+  top: 7.4vh;
+  margin-left: 44px;
   width: 87px;
   height: 29px;
   font: var(--unnamed-font-style-normal) normal
@@ -58,15 +56,15 @@
   letter-spacing: var(--unnamed-character-spacing-0);
   color: var(--unnamed-color-545871);
   text-align: left;
-  font: normal normal normal 24px/30px Basic Sans;
+  font: normal normal normal 24px Basic Sans;
   letter-spacing: 0px;
   color: #545871;
   opacity: 1;
 }
 
 .sign-up {
-  top: 62px;
-  left: 1711px;
+  top: 7.4vh;
+  margin-left: 44px;
   width: 81px;
   height: 29px;
   font: var(--unnamed-font-style-normal) normal
@@ -75,7 +73,7 @@
   letter-spacing: var(--unnamed-character-spacing-0);
   color: var(--unnamed-color-545871);
   text-align: left;
-  font: normal normal normal 24px/30px Basic Sans;
+  font: normal normal normal 24px Basic Sans;
   letter-spacing: 0px;
   color: #545871;
   opacity: 1;

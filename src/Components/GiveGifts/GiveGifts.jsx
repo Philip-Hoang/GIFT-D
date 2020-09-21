@@ -46,7 +46,7 @@ class GiveGifts extends Component {
       case 1:
         this.setState((prevState) => {
           let newState = { ...prevState };
-          newState.statusImage = giftboxes1;
+          newState.statusImage = giftboxes9;
 
           return newState;
         });
@@ -55,7 +55,7 @@ class GiveGifts extends Component {
       case 2:
         this.setState((prevState) => {
           let newState = { ...prevState };
-          newState.statusImage = giftboxes2;
+          newState.statusImage = giftboxes1;
 
           return newState;
         });
@@ -64,7 +64,7 @@ class GiveGifts extends Component {
       case 3:
         this.setState((prevState) => {
           let newState = { ...prevState };
-          newState.statusImage = giftboxes3;
+          newState.statusImage = giftboxes2;
 
           return newState;
         });
@@ -73,7 +73,7 @@ class GiveGifts extends Component {
       case 4:
         this.setState((prevState) => {
           let newState = { ...prevState };
-          newState.statusImage = giftboxes4;
+          newState.statusImage = giftboxes3;
 
           return newState;
         });
@@ -82,7 +82,7 @@ class GiveGifts extends Component {
       case 5:
         this.setState((prevState) => {
           let newState = { ...prevState };
-          newState.statusImage = giftboxes5;
+          newState.statusImage = giftboxes4;
 
           return newState;
         });
@@ -91,7 +91,7 @@ class GiveGifts extends Component {
       case 6:
         this.setState((prevState) => {
           let newState = { ...prevState };
-          newState.statusImage = giftboxes6;
+          newState.statusImage = giftboxes5;
 
           return newState;
         });
@@ -100,7 +100,7 @@ class GiveGifts extends Component {
       case 7:
         this.setState((prevState) => {
           let newState = { ...prevState };
-          newState.statusImage = giftboxes7;
+          newState.statusImage = giftboxes6;
 
           return newState;
         });
@@ -109,13 +109,22 @@ class GiveGifts extends Component {
       case 8:
         this.setState((prevState) => {
           let newState = { ...prevState };
-          newState.statusImage = giftboxes8;
+          newState.statusImage = giftboxes7;
 
           return newState;
         });
 
         break;
       case 9:
+        this.setState((prevState) => {
+          let newState = { ...prevState };
+          newState.statusImage = giftboxes8;
+
+          return newState;
+        });
+
+        break;
+      case 10:
         this.setState((prevState) => {
           let newState = { ...prevState };
           newState.statusImage = giftboxes9;
@@ -476,6 +485,7 @@ class GiveGifts extends Component {
     return (
       <React.Fragment>
         {/* <ProductCardLg /> */}
+
         <div className="col">
           <div className="row">
             <div
@@ -491,7 +501,7 @@ class GiveGifts extends Component {
               <img
                 className="float-right"
                 src={this.state.statusImage}
-                style={{ position: "absolute" }}
+                // style={{ position: "absolute" }}
                 alt="giftstatus"
               />
             </div>

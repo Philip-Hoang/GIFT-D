@@ -18,10 +18,9 @@ body {
 }
 
 .gift-header1 {
-  top: 27.5vh;
-  left: 8.3vw;
-  width: 36vw;
-  /* height: 166px; */
+  top: 208px;
+  margin-left: 112px;
+  width: 559px;
   font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold)
     var(--unnamed-font-size-48) / var(--unnamed-line-spacing-56)
     var(--unnamed-font-family-henriette);
@@ -36,7 +35,7 @@ body {
 
 .gift-header3 {
   margin-top: 3.8vh;
-  left: 8.3vw;
+  margin-left: 112px;
   width: 410px;
   /* height: 62px; */
   font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold)
@@ -52,8 +51,8 @@ body {
 }
 
 .gift-paragraph {
-  margin-top: 19vh;
-  left: 8.3vw;
+  margin-top: 29px;
+  margin-left: 112px;
   width: 28vw;
   /* height: 29px; */
   font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-300)
@@ -88,7 +87,8 @@ body {
 
   margin-top: 17px;
   /* margin-bottom: 100px; */
-  margin-right: 16px;
+  /* margin-right: 16px; */
+  margin-left: 112px;
   /* margin-left: 80px; */
 }
 
@@ -105,7 +105,9 @@ body {
   background-color: #545871;
   color: white;
   font-weight: lighter;
-  border: none;
+  border: 2px solid #545871;
+  border-radius: 8px;
+  opacity: 1;
   cursor: pointer;
   /* text-decoration: underline; */
   /* display: inline; */
@@ -120,6 +122,7 @@ body {
   margin-top: 54px;
   margin-bottom: 100px;
   margin-right: 16px;
+  margin-left: 112px;
   /* margin-left: 80px; */
 }
 
@@ -176,16 +179,22 @@ body {
   text-overflow: ellipsis;
 }
 
-/* .back-button {
-  background-color: white;
+.back-button {
+  top: 946px;
+  left: 184px;
+  width: 51px;
+  height: 29px;
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-300)
+    var(--unnamed-font-size-24) / var(--unnamed-line-spacing-32)
+    var(--unnamed-font-family-basic-sans);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-545871);
+  text-align: left;
+  font: normal normal 300 24px/32px Basic Sans;
+  letter-spacing: 0px;
   color: #545871;
-  border: none;
+  opacity: 1;
   cursor: pointer;
-  bottom: -498px;
-  left: 90px;
-  position: absolute;
-  font-size: 36px;
-  font-family: Sans-Serif, "Henriette Bold";
 }
 
 .back-button:hover,
@@ -196,8 +205,12 @@ body {
 }
 
 .back-image {
-  position: absolute;
-  bottom: -500px;
-  width: 8%;
-  height: auto;
-} */
+  top: 940px;
+  left: 128px;
+  width: 40px;
+  height: 40px;
+  background: var(--unnamed-color-545871) 0% 0% no-repeat padding-box;
+  background: #545871 0% 0% no-repeat padding-box;
+  opacity: 1;
+  cursor: pointer;
+}

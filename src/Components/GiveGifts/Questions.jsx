@@ -9,7 +9,7 @@ function mapChoices(props) {
       <React.Fragment key={Math.random() * props.keyIndex}>
         <form key={Math.random() * props.keyIndex}>
           <div className="form-group col">
-            <label className="gift-button">{choice}</label>
+            <label className={true ? `gift-button` : null}>{choice}</label>
             <input
               className="form-control"
               onChange={props.onHandleChange}
@@ -43,7 +43,11 @@ function mapChoices(props) {
     ) : (
       <h3 className="mb-4" key={Math.random() * props.keyIndex}>
         <button
-          className="badge badge-pill badge-light border border-dark gift-button"
+          className={
+            false
+              ? "badge badge-pill badge-light border border-dark gift-button"
+              : null
+          }
           onClick={props.nextQuestion}
           name={props.choiceState}
           value={choice}
@@ -62,7 +66,7 @@ function Questions(props) {
     <div className="" key={Math.random() * props.keyIndex}>
       <div className="col">
         {props.header1 ? (
-          <h1 className="gift-header1 m-0">{props.header1}</h1>
+          <h1 className="gift-header1">{props.header1}</h1>
         ) : null}
         {props.header3 ? (
           <h3 className="gift-header3">{props.header3}</h3>
@@ -72,14 +76,9 @@ function Questions(props) {
         ) : null}
         <div className="form-row">{choices}</div>
         {props.keyIndex !== 1 ? (
-          <div className="">
+          <div className="row" onClick={props.previousQuestion}>
             <img className="back-image " src={leftAngle} alt="left-angle" />
-            <h3
-              className="back-button ml-2 pt-3"
-              onClick={props.previousQuestion}
-            >
-              Back
-            </h3>
+            <h3 className="back-button ml-2 pt-3">Back</h3>
           </div>
         ) : null}
       </div>
