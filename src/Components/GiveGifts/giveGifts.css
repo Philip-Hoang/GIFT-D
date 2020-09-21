@@ -252,3 +252,34 @@ body {
   width: 80px;
   margin-left: 14px;
 }
+
+.next-button-inverse {
+  background-color: #545871;
+  color: white;
+  font-weight: lighter;
+  border: 2px solid #545871;
+  border-radius: 8px;
+  opacity: 1;
+  cursor: pointer;
+  /* text-decoration: underline; */
+  /* display: inline; */
+  font-size: 24px;
+  font-family: Sans-Serif, "Henriette Bold";
+
+  padding-top: 18px;
+  padding-right: 32px;
+  padding-bottom: 18px;
+  padding-left: 32px;
+
+  margin-top: 29px;
+  margin-left: 12px;
+
+  /* margin-left: 80px; */
+}
+
+.next-button-inverse:hover,
+.next-button-inverse:focus {
+  text-decoration: none;
+  outline: none;
+  box-shadow: none;
+}

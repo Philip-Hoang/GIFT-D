@@ -15,7 +15,11 @@ class TopNavBar extends Component {
 
   goToLogo() {
     console.log("go to logo");
-    this.props.history.push("/");
+    // this.props.history.push("/");
+    this.props.history.push({
+      pathname: "/",
+      state: { page: 1 },
+    });
   }
   goToAboutUs() {
     console.log("go to About Us");

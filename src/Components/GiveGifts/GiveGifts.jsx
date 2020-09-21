@@ -42,6 +42,24 @@ class GiveGifts extends Component {
     this.setImage();
   }
 
+  componentWillReceiveProps(nextProps) {
+    // console.log("history push routed");
+    if (nextProps.location.state !== this.props.location.state) {
+      console.log(nextProps);
+      console.log(nextProps.location.state.page);
+      this.setState(
+        (prevState) => {
+          let newState = { ...prevState };
+          newState.page = nextProps.location.state.page;
+          return newState;
+        },
+        () => {
+          this.nextQuestion();
+        }
+      );
+    }
+  }
+
   setImage = () => {
     switch (this.state.page) {
       case 1:
@@ -343,27 +361,33 @@ class GiveGifts extends Component {
   };
 
   nextQuestion = (e) => {
-    e.preventDefault();
-    let name = e.target.name;
-    let value = e.target.value;
-    // console.log(name, value);
-    this.setState(
-      (prevState) => {
-        let newState = { ...prevState };
-        newState.page = this.state.page + 1;
+    if (e) {
+      e.preventDefault();
+      let name = e.target.name;
+      let value = e.target.value;
+      // console.log(name, value);
+      this.setState(
+        (prevState) => {
+          let newState = { ...prevState };
+          newState.page = this.state.page + 1;
 
-        if (name) {
-          newState.gift[name] = value;
+          if (name) {
+            newState.gift[name] = value;
+          }
+
+          return newState;
+        },
+        () => {
+          this.generateQuestion(this.state.page);
+          this.setImage();
+          this.getGiftResults();
         }
-
-        return newState;
-      },
-      () => {
-        this.generateQuestion(this.state.page);
-        this.setImage();
-        this.getGiftResults();
-      }
-    );
+      );
+    } else {
+      this.generateQuestion(this.state.page);
+      this.setImage();
+      // this.getGiftResults();
+    }
   };
 
   previousQuestion = () => {

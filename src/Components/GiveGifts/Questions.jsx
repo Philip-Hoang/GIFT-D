@@ -20,7 +20,7 @@ function mapChoices(props) {
           {choice === "Min" ? (
             <h3>
               <button
-                className="badge badge-pill badge-light border border-dark gift-button"
+                className="badge badge-pill badge-light border border-dark next-button-inverse"
                 onClick={props.nextQuestion}
               >
                 Next
