@@ -48,6 +48,7 @@
 .reviews {
   top: 7.4vh;
   margin-left: 44px;
+  margin-right: 44px;
   width: 87px;
   height: 29px;
   font: var(--unnamed-font-style-normal) normal
@@ -64,7 +65,7 @@
 
 .sign-up {
   top: 7.4vh;
-  margin-left: 44px;
+  margin-right: 128px;
   width: 81px;
   height: 29px;
   font: var(--unnamed-font-style-normal) normal

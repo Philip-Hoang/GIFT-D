@@ -88,7 +88,7 @@ body {
   margin-top: 17px;
   /* margin-bottom: 100px; */
   /* margin-right: 16px; */
-  margin-left: 112px;
+  margin-left: 12px;
   /* margin-left: 80px; */
 }
 
@@ -120,9 +120,8 @@ body {
   padding-left: 32px;
 
   margin-top: 54px;
-  margin-bottom: 100px;
-  margin-right: 16px;
-  margin-left: 112px;
+  margin-left: 12px;
+
   /* margin-left: 80px; */
 }
 
@@ -143,7 +142,7 @@ body {
   padding-right: 32px;
   padding-left: 32px;
   margin: 10px;
-  width: calc(100vw / 7);
+  width: calc(100vw / 8);
   /* text-decoration: underline; */
   /* display: inline; */
   /* font-size: 24px;
@@ -180,21 +179,23 @@ body {
 }
 
 .back-button {
-  top: 946px;
-  left: 184px;
-  width: 51px;
-  height: 29px;
-  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-300)
-    var(--unnamed-font-size-24) / var(--unnamed-line-spacing-32)
-    var(--unnamed-font-family-basic-sans);
+  /* top: 946px; */
+  /* left: 184px; */
+  /* width: 51px; */
+  /* height: 29px; */
+  /* font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-300)
+    var(--unnamed-font-size-32) / var(--unnamed-line-spacing-32)
+    var(--unnamed-font-family-basic-sans); */
   letter-spacing: var(--unnamed-character-spacing-0);
   color: var(--unnamed-color-545871);
   text-align: left;
-  font: normal normal 300 24px/32px Basic Sans;
+  font: 28px Basic Sans;
   letter-spacing: 0px;
   color: #545871;
   opacity: 1;
   cursor: pointer;
+  margin-left: 8px;
+  padding-top: 4px;
 }
 
 .back-button:hover,
@@ -205,12 +206,31 @@ body {
 }
 
 .back-image {
-  top: 940px;
-  left: 128px;
-  width: 40px;
+  /* top: 940px; */
+  /* left: 128px; */
+  /* width: 40px; */
+  margin-left: 144px;
   height: 40px;
   background: var(--unnamed-color-545871) 0% 0% no-repeat padding-box;
   background: #545871 0% 0% no-repeat padding-box;
   opacity: 1;
   cursor: pointer;
+}
+
+.gift-tracker {
+  /* background-color: yellow; */
+  display: show;
+  min-width: 1200px;
+  min-height: 722px;
+}
+
+@media only screen and (max-width: 1700px) {
+  .gift-tracker {
+    display: none;
+  }
+}
+
+.results {
+  margin-left: 144px;
+  margin-right: 10px;
 }

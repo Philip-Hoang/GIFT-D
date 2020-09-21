@@ -12,6 +12,7 @@ import Questions from "./Questions";
 import "./giveGifts.css";
 import ProductCard from "./ProductCard";
 import axios from "axios";
+import leftAngle from "../Images/leftAngle.PNG";
 import ProductCardLg from "./ProductCardLg";
 
 class GiveGifts extends Component {
@@ -496,7 +497,8 @@ class GiveGifts extends Component {
                 ? this.state.questionComponent
                 : null}
             </div>
-            <div className="col-8">
+            {/* <div className="col-2 gift-tracker-mobile"></div> */}
+            <div className="col-8 gift-tracker ">
               {/* <div className="offset-4"> */}
               <img
                 className="float-right"
@@ -508,17 +510,26 @@ class GiveGifts extends Component {
           </div>
           {this.state.page === 10 ? (
             <React.Fragment>
-              <div className="row">
-                <h1>Top Trending Results</h1>
-                <h1>See More</h1>
-              </div>
-              <div className="row">{this.state.topTrendingResults}</div>
-              <div className="row">
-                <h1>All Results</h1>
+              <div className="results">
+                {" "}
+                <div className="row">
+                  <h1>Top Trending Results</h1>
+                  <h1 className="float-right">See More</h1>
+                </div>
+                <div className="row">{this.state.topTrendingResults}</div>
+                <div className="row">
+                  <h1>All Results</h1>
+                </div>
               </div>
 
-              <div className="row">{this.state.allResults}</div>
+              <div className="row results">{this.state.allResults}</div>
             </React.Fragment>
+          ) : null}
+          {this.state.page !== 1 ? (
+            <div className="row" onClick={this.previousQuestion}>
+              <img className="back-image " src={leftAngle} alt="left-angle" />
+              <h3 className="back-button">Back</h3>
+            </div>
           ) : null}
         </div>
       </React.Fragment>

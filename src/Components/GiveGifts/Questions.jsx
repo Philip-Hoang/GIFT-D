@@ -30,7 +30,7 @@ function mapChoices(props) {
         </form>
       </React.Fragment>
     ) : props.keyIndex === 1 ? (
-      <h3 className="mb-4" key={Math.random() * props.keyIndex}>
+      <h3 className="" key={Math.random() * props.keyIndex}>
         <button
           className="badge badge-pill badge-light border border-dark gift-button-inverse"
           onClick={props.nextQuestion}
@@ -43,11 +43,7 @@ function mapChoices(props) {
     ) : (
       <h3 className="mb-4" key={Math.random() * props.keyIndex}>
         <button
-          className={
-            false
-              ? "badge badge-pill badge-light border border-dark gift-button"
-              : null
-          }
+          className="badge badge-pill badge-light border border-dark gift-button"
           onClick={props.nextQuestion}
           name={props.choiceState}
           value={choice}
@@ -74,13 +70,9 @@ function Questions(props) {
         {props.question ? (
           <p className="gift-paragraph">{props.question}</p>
         ) : null}
-        <div className="form-row">{choices}</div>
-        {props.keyIndex !== 1 ? (
-          <div className="row" onClick={props.previousQuestion}>
-            <img className="back-image " src={leftAngle} alt="left-angle" />
-            <h3 className="back-button ml-2 pt-3">Back</h3>
-          </div>
-        ) : null}
+        <div className="form-row" style={{ marginLeft: "100px" }}>
+          {choices}
+        </div>
       </div>
     </div>
   );
