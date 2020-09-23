@@ -61,7 +61,7 @@ body {
   letter-spacing: var(--unnamed-character-spacing-0);
   color: var(--unnamed-color-000000);
   text-align: left;
-  font: normal normal 300 24px/32px Basic Sans;
+  font: normal normal 300 24px/32px "Open Sans", sans-serif;
   letter-spacing: 0px;
   color: #000000;
   opacity: 1;
@@ -189,7 +189,7 @@ body {
   letter-spacing: var(--unnamed-character-spacing-0);
   color: var(--unnamed-color-545871);
   text-align: left;
-  font: 28px Basic Sans;
+  font: 28px "Open Sans", sans-serif;
   letter-spacing: 0px;
   color: #545871;
   opacity: 1;
@@ -224,11 +224,11 @@ body {
   min-height: 722px;
 }
 
-@media only screen and (max-width: 1700px) {
+/* @media only screen and (max-width: 1200px) {
   .gift-tracker {
     display: none;
   }
-}
+} */
 
 .results {
   margin-left: 144px;
@@ -242,7 +242,7 @@ body {
   letter-spacing: var(--unnamed-character-spacing-0);
   color: var(--unnamed-color-545871);
   text-align: left;
-  font: normal normal normal 20px/32px Basic Sans;
+  font: normal normal normal 20px/32px "Open Sans", sans-serif;
   letter-spacing: 0px;
   color: #545871;
   opacity: 1;
@@ -282,4 +282,117 @@ body {
   text-decoration: none;
   outline: none;
   box-shadow: none;
+}
+
+.sign-up-text {
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-300)
+    var(--unnamed-font-size-24) / var(--unnamed-line-spacing-32)
+    var(--unnamed-font-family-basic-sans);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-545871);
+  text-align: left;
+  font: normal normal 300 24px/32px Basic Sans;
+  letter-spacing: 0px;
+  color: #545871;
+  opacity: 1;
+}
+
+.sign-up-input {
+  border: 2px solid var(--unnamed-color-545871);
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 2px solid #545871;
+  border-radius: 8px;
+  opacity: 1;
+}
+
+.sign-up-button {
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-300)
+    var(--unnamed-font-size-24) / var(--unnamed-line-spacing-32)
+    var(--unnamed-font-family-basic-sans);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-545871);
+  text-align: center;
+  font: normal normal 300 24px/32px Basic Sans;
+  letter-spacing: 0px;
+  color: #545871;
+
+  border: 2px solid var(--unnamed-color-545871);
+  /* background: #ffffff 0% 0% no-repeat padding-box; */
+  border: 2px solid #545871;
+  border-radius: 8px;
+  opacity: 1;
+}
+
+.sign-up-button:hover,
+.sign-up-button:focus {
+  color: whitesmoke;
+  background-color: #545871;
+}
+
+.modal-button {
+  width: 400px;
+  height: 56px;
+  background: var(--unnamed-color-545871) 0% 0% no-repeat padding-box;
+  background: #545871 0% 0% no-repeat padding-box;
+  border-radius: 8px;
+  opacity: 1;
+}
+
+.modal-button:hover,
+.modal-button:focus {
+  color: whitesmoke;
+  background-color: #545871;
+}
+
+.modal-box {
+  border: none;
+}
+
+.name-input {
+  width: 400px;
+  margin-left: 10px;
+  border: 2px solid var(--unnamed-color-545871);
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 2px solid #545871;
+  border-radius: 8px;
+  opacity: 1;
+}
+
+.name-text {
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-300)
+    var(--unnamed-font-size-24) / var(--unnamed-line-spacing-32)
+    var(--unnamed-font-family-basic-sans);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-545871);
+  text-align: left;
+  font: normal normal 300 24px/32px Basic Sans;
+  letter-spacing: 0px;
+  color: #545871;
+  opacity: 1;
+  margin-left: 10px;
+}
+
+.save-button {
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-300)
+    var(--unnamed-font-size-24) / var(--unnamed-line-spacing-32)
+    var(--unnamed-font-family-basic-sans);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-545871);
+  text-align: center;
+  font: normal normal 300 24px/32px Open Sans;
+  letter-spacing: 0px;
+  color: #545871;
+  margin-left: 13px;
+
+  border: 2px solid var(--unnamed-color-545871);
+  /* background: #ffffff 0% 0% no-repeat padding-box; */
+  border: 2px solid #545871;
+  border-radius: 8px;
+  opacity: 1;
+}
+
+.save-button:hover,
+.save-button:focus {
+  color: whitesmoke;
+  background-color: #545871;
 }

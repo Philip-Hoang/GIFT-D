@@ -11,7 +11,7 @@ const allRoutes = [
     path: "/GIFT-D",
     exact: true,
     roles: true,
-    component: lazy(() => import("./Components/UnderConstruction")),
+    component: lazy(() => import("./Components/GiveGifts/GiveGifts")),
   },
   {
     path: "/aboutus",
@@ -29,7 +29,7 @@ const allRoutes = [
     path: "/signup",
     exact: true,
     roles: true,
-    component: lazy(() => import("./Components/UnderConstruction")),
+    component: lazy(() => import("./Components/GiveGifts/GiveGifts")),
   },
 ];
 export default allRoutes;

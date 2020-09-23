@@ -13,7 +13,10 @@ import "./giveGifts.css";
 import ProductCard from "./ProductCard";
 import axios from "axios";
 import leftAngle from "../Images/leftAngle.PNG";
+import MyVerticallyCenteredModal from "./MyVerticallyCenteredModal";
+
 import ProductCardLg from "./ProductCardLg";
+import { faGrinTongueSquint } from "@fortawesome/free-solid-svg-icons";
 
 class GiveGifts extends Component {
   constructor(props) {
@@ -22,6 +25,7 @@ class GiveGifts extends Component {
       statusImage: giftboxes1,
       page: 1,
       questionComponent: null,
+      modalShow: false,
       gift: {
         lookingFor: " ",
         age: "",
@@ -31,6 +35,8 @@ class GiveGifts extends Component {
         occasion: "",
         min: "",
         max: "",
+        name: "Coworker",
+        resultsSaved: false,
       },
       topTrendingResults: [],
       allResults: [],
@@ -183,19 +189,6 @@ class GiveGifts extends Component {
         );
         break;
       case 2:
-        header1 = "What kind of gift would you like to give?";
-        header3 = "";
-        question = "";
-        choices = ["Gift", "Gift Card"];
-        this.generateQuestionComponent(
-          header1,
-          header3,
-          question,
-          choices,
-          choiceState
-        );
-        break;
-      case 3:
         header1 = "Let's find that perfect gift!";
         header3 =
           "Tell us a little about what kind of gift you would like to give.";
@@ -211,23 +204,11 @@ class GiveGifts extends Component {
           choiceState
         );
         break;
-      case 4:
+      case 3:
         header1 = "Let's find that perfect gift!";
         header3 = "Tell us a little about who your fun gift is for.";
         question = "The gift is for someone who is:";
-        choices = [
-          "Baby",
-          "Toddler",
-          "Child",
-          "Teenager",
-          "20-29",
-          "30-39",
-          "40-49",
-          "50-59",
-          "60-69",
-          "70-79",
-          "80+",
-        ];
+        choices = ["Baby", "Toddler", "Child", "Teenager", "Adult", "Senior"];
         choiceState = "age";
         this.generateQuestionComponent(
           header1,
@@ -237,7 +218,7 @@ class GiveGifts extends Component {
           choiceState
         );
         break;
-      case 5:
+      case 4:
         header1 = "Let's find that perfect gift!";
         header3 = "Tell us a little about who your fun gift is for.";
         question = `The gift is for a ${this.state.gift.age} year old:`;
@@ -253,7 +234,7 @@ class GiveGifts extends Component {
           choiceState
         );
         break;
-      case 6:
+      case 5:
         header1 = "Let's find that perfect gift!";
         header3 = `Tell us a little about who your fun gift is for.`;
         question = `The gift is for a ${this.state.gift.age} year old ${this.state.gift.gender} who loves:`;
@@ -278,7 +259,7 @@ class GiveGifts extends Component {
           choiceState
         );
         break;
-      case 7:
+      case 6:
         header1 = "Let's find that perfect gift!";
         header3 = `Tell us who the ${this.state.gift.age} year old ${this.state.gift.gender} that loves ${this.state.gift.interest} is.`;
         question = "The gift recipient is my:";
@@ -294,7 +275,7 @@ class GiveGifts extends Component {
           choiceState
         );
         break;
-      case 8:
+      case 7:
         header1 = "Let's find that perfect gift!";
         header3 = `Tell us what this fun gift for my ${this.state.gift.isMy} who is a ${this.state.gift.age} year old ${this.state.gift.gender} that loves ${this.state.gift.interest} is for.`;
         question = "This gift is for:";
@@ -318,13 +299,25 @@ class GiveGifts extends Component {
           choiceState
         );
         break;
-      case 9:
+      case 8:
         header1 = "Let's find that perfect gift!";
         header3 = `Tell us how much you want to spend on this fun ${this.state.gift.occasion} gift for the ${this.state.gift.age} year old ${this.state.gift.gender} who loves ${this.state.gift.interest}`;
         question = "I want to spend:";
         choices = ["Min", "Max"];
         choiceState = ["min", "max"];
 
+        this.generateQuestionComponent(
+          header1,
+          header3,
+          question,
+          choices,
+          choiceState
+        );
+        break;
+      case 9:
+        header1 = "We're finding you the perfect gift!";
+        header3 = `While we're searching for the matching gift options, would you like to join to save your search?`;
+        choices = ["Sign me up!", "Skip for now"];
         this.generateQuestionComponent(
           header1,
           header3,
@@ -353,7 +346,63 @@ class GiveGifts extends Component {
         );
         break;
       case 11:
-        // code block
+        header1 = "We're finding you the perfect gift!";
+        header3 = `Great! We're excited to have you join!`;
+
+        choices = [
+          "Sign Up with Email",
+          "Sign up with Google",
+          "Sign up with Facebook",
+        ];
+        this.generateQuestionComponent(
+          header1,
+          header3,
+          question,
+          choices,
+          choiceState
+        );
+        break;
+      case 12:
+        header1 = "We're finding you the perfect gift!";
+        header3 = `Great! We're excited to have you join!`;
+
+        choices = ["Email", "Password", "Confirm Password", "Sign Up"];
+        choiceState = ["email", "password", "confirmPassword", "signUp"];
+        this.generateQuestionComponent(
+          header1,
+          header3,
+          question,
+          choices,
+          choiceState
+        );
+        break;
+      case 13:
+        header1 = "Welcome! \n We're so happy to have you!";
+        header3 = `No time to choose a gift now? \n Just save your results for later or view them now!`;
+
+        choices = ["Save Results", "Continue to Results"];
+
+        this.generateQuestionComponent(
+          header1,
+          header3,
+          question,
+          choices,
+          choiceState
+        );
+        break;
+      case 14:
+        header1 = "No Problem! \n Your results will be here.";
+        header3 = `Come back when you're ready!`;
+        question = `name your results and they'll be waiting in your account page.`;
+        choices = ["Name", "Save"];
+
+        this.generateQuestionComponent(
+          header1,
+          header3,
+          question,
+          choices,
+          choiceState
+        );
         break;
       default:
       // code block
@@ -366,23 +415,55 @@ class GiveGifts extends Component {
       let name = e.target.name;
       let value = e.target.value;
       // console.log(name, value);
-      this.setState(
-        (prevState) => {
-          let newState = { ...prevState };
-          newState.page = this.state.page + 1;
 
-          if (name) {
-            newState.gift[name] = value;
+      if (value === "Sign me up!") {
+        console.log("hey there");
+        this.setState(
+          (prevState) => {
+            let newState = { ...prevState };
+            newState.page = 11;
+
+            return newState;
+          },
+          () => {
+            this.generateQuestion(this.state.page);
+            this.setImage();
           }
+        );
+      } else if (value === "Sign Up with Email") {
+        this.setState(
+          (prevState) => {
+            let newState = { ...prevState };
+            newState.page = 12;
 
-          return newState;
-        },
-        () => {
-          this.generateQuestion(this.state.page);
-          this.setImage();
-          this.getGiftResults();
-        }
-      );
+            return newState;
+          },
+          () => {
+            this.generateQuestion(this.state.page);
+            this.setImage();
+          }
+        );
+      } else {
+        ///
+        this.setState(
+          (prevState) => {
+            let newState = { ...prevState };
+            newState.page = this.state.page + 1;
+
+            if (name) {
+              newState.gift[name] = value;
+            }
+
+            return newState;
+          },
+          () => {
+            this.generateQuestion(this.state.page);
+            this.setImage();
+            this.getGiftResults();
+          }
+        );
+        ///
+      }
     } else {
       this.generateQuestion(this.state.page);
       this.setImage();
@@ -395,6 +476,47 @@ class GiveGifts extends Component {
       (prevState) => {
         let newState = { ...prevState };
         newState.page = this.state.page - 1;
+        return newState;
+      },
+      () => {
+        this.generateQuestion(this.state.page);
+        this.setImage();
+      }
+    );
+  };
+
+  onClickSaveResults = () => {
+    this.setState(
+      (prevState) => {
+        let newState = { ...prevState };
+        newState.page = 10;
+        newState.gift.resultsSaved = true;
+        return newState;
+      },
+      () => {
+        this.onClickTriggerModal();
+      }
+    );
+  };
+
+  onClickTriggerModal = () => {
+    this.generateQuestion(this.state.page);
+    this.setImage();
+    this.getGiftResults();
+    this.setState((prevState) => {
+      let newState = { ...prevState };
+      newState.modalShow = !newState.modalShow;
+
+      return newState;
+    });
+  };
+
+  onClickSignUp = (e) => {
+    e.preventDefault();
+    this.setState(
+      (prevState) => {
+        let newState = { ...prevState };
+        newState.page = 13;
         return newState;
       },
       () => {
@@ -422,6 +544,8 @@ class GiveGifts extends Component {
         previousQuestion={this.previousQuestion}
         keyIndex={this.state.page}
         onHandleChange={this.onHandleChange}
+        onClickSignUp={this.onClickSignUp}
+        onClickSaveResults={this.onClickSaveResults}
       />
     );
 
@@ -448,8 +572,9 @@ class GiveGifts extends Component {
     if (this.state.page === 10) {
       const config = {
         method: "GET",
-        // url: `https://cors-anywhere.herokuapp.com/https://openapi.etsy.com/v2/listings/active?api_key=19ho4058q7dgjz56jaqbqpuq&limit=30&keywords=${this.state.gift.lookingFor},${this.state.gift.age},${this.state.gift.gender},${this.state.gift.interest},${this.state.gift.isMy},${this.state.gift.occasion}&includes=Images`,
-        url: `https://cors-anywhere.herokuapp.com/https://openapi.etsy.com/v2/listings/active?api_key=19ho4058q7dgjz56jaqbqpuq&limit=30&includes=Images`,
+        // url: `https://cors-anywhere.herokuapp.com/https://openapi.etsy.com/v2/listings/active?api_key=19ho4058q7dgjz56jaqbqpuq&limit=30&min_price=${this.state.gift.min}&max_price=${this.state.gift.max}&keywords=${this.state.gift.lookingFor},${this.state.gift.age},${this.state.gift.gender},${this.state.gift.interest},${this.state.gift.isMy},${this.state.gift.occasion}&includes=Images`,
+        url: `https://cors-anywhere.herokuapp.com/https://openapi.etsy.com/v2/listings/active?api_key=19ho4058q7dgjz56jaqbqpuq&limit=30&min_price=${this.state.gift.min}&max_price=${this.state.gift.max}&keywords=${this.state.gift.gender},${this.state.gift.interest},${this.state.gift.occasion}&includes=Images`,
+        // url: `https://cors-anywhere.herokuapp.com/https://openapi.etsy.com/v2/listings/active?api_key=19ho4058q7dgjz56jaqbqpuq&limit=30&includes=Images`,
       };
       //used proxy to access
       return axios(config).then(this.getGiftResultsSuccess);
@@ -510,7 +635,11 @@ class GiveGifts extends Component {
     return (
       <React.Fragment>
         {/* <ProductCardLg /> */}
-
+        <MyVerticallyCenteredModal
+          show={this.state.modalShow}
+          onHide={this.onClickTriggerModal}
+          savedName={this.state.gift.name}
+        />
         <div className="col">
           <div className="row">
             <div
@@ -538,7 +667,7 @@ class GiveGifts extends Component {
                 {" "}
                 <div className="row">
                   <h1>Top Trending Results</h1>
-                  <h1 className="float-right">See More</h1>
+                  {/* <h1 className="float-right">See More</h1> */}
                 </div>
                 <div className="row">{this.state.topTrendingResults}</div>
                 <div className="row">

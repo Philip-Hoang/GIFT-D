@@ -30,8 +30,10 @@ class TopNavBar extends Component {
     this.props.history.push("/reviews");
   }
   goToSignUp() {
-    console.log("go to Sign Up");
-    this.props.history.push("/signup");
+    this.props.history.push({
+      pathname: "/signup",
+      state: { page: 11 },
+    });
   }
 
   render() {
