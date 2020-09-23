@@ -1,0 +1,2 @@
+(this.webpackJsonpgiftd=this.webpackJsonpgiftd||[]).push([[2],{102:function(t,n,e){"use strict";e.r(n),e.d(n,"default",(function(){return s}));var i=e(0),a=e.n(i),r=e(99),c=e.n(r);function s(){return a.a.createElement("div",null,a.a.createElement("img",{src:c.a,alt:""}))}},99:function(t,n,e){t.exports=e.p+"static/media/UnderConstruction1.74b87a84.png"}}]);
+//# sourceMappingURL=2.162ece3c.chunk.js.map
