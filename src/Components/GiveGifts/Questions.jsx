@@ -160,7 +160,11 @@ function mapChoices(props) {
               : `gift-button`
           }
           onClick={
-            choice === "Save" ? props.onClickSaveResults : props.nextQuestion
+            choice === "Save"
+              ? props.onClickSaveResults
+              : choice === "Continue to Results"
+              ? props.onClickGoToResults
+              : props.nextQuestion
           }
           name={props.choiceState}
           style={

@@ -33,8 +33,8 @@ class GiveGifts extends Component {
         interest: "",
         isMy: "",
         occasion: "",
-        min: "",
-        max: "",
+        min: 1,
+        max: 100,
         name: "Coworker",
         resultsSaved: false,
       },
@@ -221,7 +221,7 @@ class GiveGifts extends Component {
       case 4:
         header1 = "Let's find that perfect gift!";
         header3 = "Tell us a little about who your fun gift is for.";
-        question = `The gift is for a ${this.state.gift.age} year old:`;
+        question = `The gift is for a ${this.state.gift.age}:`;
         choices = ["Man", "Woman", "Gender Neutral"];
 
         choiceState = "gender";
@@ -237,7 +237,7 @@ class GiveGifts extends Component {
       case 5:
         header1 = "Let's find that perfect gift!";
         header3 = `Tell us a little about who your fun gift is for.`;
-        question = `The gift is for a ${this.state.gift.age} year old ${this.state.gift.gender} who loves:`;
+        question = `The gift is for a ${this.state.gift.age} ${this.state.gift.gender} who loves:`;
         choices = [
           "Art",
           "Books",
@@ -261,7 +261,7 @@ class GiveGifts extends Component {
         break;
       case 6:
         header1 = "Let's find that perfect gift!";
-        header3 = `Tell us who the ${this.state.gift.age} year old ${this.state.gift.gender} that loves ${this.state.gift.interest} is.`;
+        header3 = `Tell us who the ${this.state.gift.age} ${this.state.gift.gender} that loves ${this.state.gift.interest} is.`;
         question = "The gift recipient is my:";
         choices = ["Acquaintance", "Co-worker", "N/A"];
 
@@ -277,8 +277,8 @@ class GiveGifts extends Component {
         break;
       case 7:
         header1 = "Let's find that perfect gift!";
-        header3 = `Tell us what this fun gift for my ${this.state.gift.isMy} who is a ${this.state.gift.age} year old ${this.state.gift.gender} that loves ${this.state.gift.interest} is for.`;
-        question = "This gift is for:";
+        header3 = `Tell us what this fun gift for my ${this.state.gift.isMy} who is a ${this.state.gift.age} ${this.state.gift.gender} that loves ${this.state.gift.interest} is for.`;
+        question = "This gift is for a:";
         choices = [
           "Anniversary",
           "Birthday",
@@ -301,7 +301,7 @@ class GiveGifts extends Component {
         break;
       case 8:
         header1 = "Let's find that perfect gift!";
-        header3 = `Tell us how much you want to spend on this fun ${this.state.gift.occasion} gift for the ${this.state.gift.age} year old ${this.state.gift.gender} who loves ${this.state.gift.interest}`;
+        header3 = `Tell us how much you want to spend on this fun ${this.state.gift.occasion} gift for the ${this.state.gift.age} ${this.state.gift.gender} who loves ${this.state.gift.interest}`;
         question = "I want to spend:";
         choices = ["Min", "Max"];
         choiceState = ["min", "max"];
@@ -467,7 +467,7 @@ class GiveGifts extends Component {
     } else {
       this.generateQuestion(this.state.page);
       this.setImage();
-      // this.getGiftResults();
+      this.getGiftResults();
     }
   };
 
@@ -485,7 +485,8 @@ class GiveGifts extends Component {
     );
   };
 
-  onClickSaveResults = () => {
+  onClickSaveResults = (e) => {
+    console.log(e);
     this.setState(
       (prevState) => {
         let newState = { ...prevState };
@@ -495,6 +496,21 @@ class GiveGifts extends Component {
       },
       () => {
         this.onClickTriggerModal();
+      }
+    );
+  };
+
+  onClickGoToResults = () => {
+    this.setState(
+      (prevState) => {
+        let newState = { ...prevState };
+        newState.page = 10;
+        return newState;
+      },
+      () => {
+        this.generateQuestion(this.state.page);
+        this.setImage();
+        this.getGiftResults();
       }
     );
   };
@@ -546,6 +562,7 @@ class GiveGifts extends Component {
         onHandleChange={this.onHandleChange}
         onClickSignUp={this.onClickSignUp}
         onClickSaveResults={this.onClickSaveResults}
+        onClickGoToResults={this.onClickGoToResults}
       />
     );
 
