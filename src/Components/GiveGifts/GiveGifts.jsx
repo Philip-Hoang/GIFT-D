@@ -177,7 +177,7 @@ class GiveGifts extends Component {
         header3 = "";
 
         question =
-          "Secret Santa, White Elephant, work anniversaries? We know how stressful it is to pick gifts for your co-workers and acquaintances. We make it easier by providing curated gift options or customizable gift cards";
+          "Secret Santa, White Elephant, work anniversaries? We know how stressful it is to pick gifts for your co-workers and acquaintances. We make it easier by providing curated gift options.";
         choices = ["Let's Get Started!"];
 
         this.generateQuestionComponent(
@@ -207,7 +207,7 @@ class GiveGifts extends Component {
       case 3:
         header1 = "Let's find that perfect gift!";
         header3 = "Tell us a little about who your fun gift is for.";
-        question = "The gift is for someone who is:";
+        question = "The gift is for someone who is a:";
         choices = ["Baby", "Toddler", "Child", "Teenager", "Adult", "Senior"];
         choiceState = "age";
         this.generateQuestionComponent(
@@ -586,23 +586,49 @@ class GiveGifts extends Component {
   };
 
   getGiftResults = () => {
+    // function getData(data)
+
     if (this.state.page === 10) {
       const config = {
         method: "GET",
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+          "Content-Type": "application/json",
+        },
         // url: `https://cors-anywhere.herokuapp.com/https://openapi.etsy.com/v2/listings/active?api_key=19ho4058q7dgjz56jaqbqpuq&limit=30&min_price=${this.state.gift.min}&max_price=${this.state.gift.max}&keywords=${this.state.gift.lookingFor},${this.state.gift.age},${this.state.gift.gender},${this.state.gift.interest},${this.state.gift.isMy},${this.state.gift.occasion}&includes=Images`,
-        url: `https://cors-anywhere.herokuapp.com/https://openapi.etsy.com/v2/listings/active?api_key=19ho4058q7dgjz56jaqbqpuq&limit=30&min_price=${this.state.gift.min}&max_price=${this.state.gift.max}&keywords=${this.state.gift.gender},${this.state.gift.interest},${this.state.gift.occasion}&includes=Images`,
+        // url: `https://cors-anywhere.herokuapp.com/https://openapi.etsy.com/v2/listings/active?api_key=19ho4058q7dgjz56jaqbqpuq&limit=30&min_price=${this.state.gift.min}&max_price=${this.state.gift.max}&keywords=${this.state.gift.gender},${this.state.gift.interest},${this.state.gift.occasion}&includes=Images`,
+        url: `https://thingproxy.freeboard.io/fetch/https://openapi.etsy.com/v2/listings/active?api_key=19ho4058q7dgjz56jaqbqpuq&limit=30&min_price=${this.state.gift.min}&max_price=${this.state.gift.max}&keywords=${this.state.gift.gender},${this.state.gift.interest},${this.state.gift.occasion}&includes=Images`,
+        // url: `https://api.allorigins.win/get?https://openapi.etsy.com/v2/listings/active?api_key=19ho4058q7dgjz56jaqbqpuq&limit=30&min_price=${this.state.gift.min}&max_price=${this.state.gift.max}&keywords=${this.state.gift.gender},${this.state.gift.interest},${this.state.gift.occasion}&includes=Images`,
+
+        // url: `https://openapi.etsy.com/v2/listings/active?api_key=19ho4058q7dgjz56jaqbqpuq&limit=30&min_price=${this.state.gift.min}&max_price=${this.state.gift.max}&keywords=${this.state.gift.gender},${this.state.gift.interest},${this.state.gift.occasion}&includes=Images`,
+
+        // url: `https://openapi.etsy.com/v2/listings/active.js?api_key=19ho4058q7dgjz56jaqbqpuq&limit=30&min_price=${this.state.gift.min}&max_price=${this.state.gift.max}&keywords=${this.state.gift.gender},${this.state.gift.interest},${this.state.gift.occasion}&includes=Images`,
         // url: `https://cors-anywhere.herokuapp.com/https://openapi.etsy.com/v2/listings/active?api_key=19ho4058q7dgjz56jaqbqpuq&limit=30&includes=Images`,
       };
       //used proxy to access
       return axios(config).then(this.getGiftResultsSuccess);
       // .catch(console.log("error"));
     }
+
+    // let api = `https://openapi.etsy.com/v2/listings/active?api_key=19ho4058q7dgjz56jaqbqpuq&limit=30&min_price=${this.state.gift.min}&max_price=${this.state.gift.max}&keywords=${this.state.gift.gender},${this.state.gift.interest},${this.state.gift.occasion}&includes=Images`;
+    // fetch(api)
+    //   .then((response) => {
+    //     if (!response.ok) throw new Error("Not OK", response.status);
+    //     else return response.json();
+    //   })
+    //   .then((data) => {
+    //     this.getGiftResultsSuccess(data);
+    //     console.log("DATA CAME", api);
+    //   })
+    //   .catch((error) => {
+    //     console.log("error catched: " + error);
+    //   });
   };
 
   getGiftResultsSuccess = (data) => {
     let results = data.data.results;
 
-    console.log(results[0].title, results[0].url, results[0].price);
+    // console.log(results[0].title, results[0].url, results[0].price);
 
     this.generateProductCards(results);
   };
@@ -611,7 +637,7 @@ class GiveGifts extends Component {
     //results is an array
 
     let giftComponent = results.map(this.mappedGifts);
-
+    console.log(results);
     this.setState((prevState) => {
       let newState = { ...prevState };
 
